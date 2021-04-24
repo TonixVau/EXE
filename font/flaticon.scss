@@ -1,0 +1,33 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?be019bcb7e11bdb2f2a4d3192adc47b5") format("truetype"),
+url("./flaticon.woff?be019bcb7e11bdb2f2a4d3192adc47b5") format("woff"),
+url("./flaticon.woff2?be019bcb7e11bdb2f2a4d3192adc47b5") format("woff2"),
+url("./flaticon.eot?be019bcb7e11bdb2f2a4d3192adc47b5#iefix") format("embedded-opentype"),
+url("./flaticon.svg?be019bcb7e11bdb2f2a4d3192adc47b5#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "settings": "\f101",
+    "smartphone": "\f102",
+);
+
+.flaticon-settings:before {
+    content: map-get($flaticon-map, "settings");
+}
+.flaticon-smartphone:before {
+    content: map-get($flaticon-map, "smartphone");
+}
