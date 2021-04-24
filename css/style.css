@@ -17,7 +17,13 @@ ul,ol {
     margin: 0 auto;
 }
 /*===============Navbar part gose to here=====================*/
-
+.bg {
+    background-color: red;
+}
+.nav {
+    background-color:#fff;
+   
+}
 .logo {
     position: relative;
 }
@@ -51,14 +57,8 @@ ul,ol {
 .navbar-top-text i:hover {
     color: #e5493a;
 }
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999999;
-    position: relative;
-}
+
+
 .nav-main {
     display: flex;
     
@@ -93,7 +93,7 @@ ul,ol {
     position: absolute;
     content: '';
     width: 0;
-    height: 3px;
+    height: 2px;
     background-color:#e5493a;
     left: 0px;
     top: -12px;
@@ -102,7 +102,7 @@ ul,ol {
 }
 .menu ul li a:hover::after {
     opacity: 1;
-    width: 100%;
+    width: 16px;
 }
 .menu ul li i {
     color: #363636;
@@ -262,7 +262,6 @@ ul,ol {
     padding-top: 30px;
     font-size: 24px;
     color: #363636;
-    margin-top: 30px;
     transition: all linear .3s;
 }
 .item-text p {
@@ -288,8 +287,9 @@ ul,ol {
 }
 .item-text i {
     font-size: 30px;
-    padding: 26px 30px;
-    border: 1px solid;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
     background-color: #363636;
     border-radius: 50%;
     color: #fff;
@@ -678,7 +678,6 @@ ul,ol {
 .blog-text i {
     font-size: 20px;
     color: #fff;
-    border: 1px solid #252525;
     padding: 12px 12px ;
     background-color: #252525;
     transition: all linear .3s;
@@ -687,7 +686,6 @@ ul,ol {
     border-radius: 20px;
     margin-left: 90px;
     margin-top: 100px;
-    border: 1px solid #252525;
     padding: 12px 12px ;
     background-color: #252525;
     color: #fff;
@@ -696,7 +694,6 @@ ul,ol {
 #link {
     border-radius: 20px;
     margin-left: 8px;
-    border: 1px solid #252525;
     padding: 12px 12px ;
     background-color: #252525;
     color: #fff;
@@ -786,73 +783,118 @@ ul,ol {
 }
 /*===============theme part gose to here=====================*/
 #theme {
-    margin-top: 80px;
+    padding-top: 80px;
+  }
+.theme-head {
+    text-align: center;
 }
-.banner-theme {
-    position: relative;
-}
-.theme-overlay {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-}
-.theme-main {
-    
-}
-.theme-text {
-    display: flex;
-    position: absolute;
-    right: 352px;
-    top: 273px;
-    width: 365px;
-
-}
-.theme-text i {
-    font-size: 40px;
-    right: 30px;
-    height: 77px;
-    width: 107px;
-    line-height: 78px;
-    border: 4px solid #fafafa;
-    border-radius: 50%;
-    background-color: #fafafa;
-    color: #363636;
-    padding-left: 15px;
-    transition: all linear .3s;
-
-}
-.theme-last  {
-    padding-left: 35px;
-}
-.theme-last  h1 {
+.theme-head h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     color: #363636;
-    padding-bottom: 10px;
-    transition: all linear .3s;
+    margin-bottom: 20px;
+
 }
-.theme-last  p {
-    font-family: 'Roboto', sans-serif;
+.theme-head p {
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: #9b9b9b;
+    padding: 0 296px;
+    color: #959595;
+    margin-bottom: 80px;
+    position: relative;
 }
-.theme-text:hover i{
+
+.theme-bg {
+    width: 100%;
+    background: url(../images/theme-bg.png) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+  }
+  
+.theme-main {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.theme-image {
+    width: 740px;
+  }
+  
+.image img {
+    display: block;
+  }
+  
+.theme-last{
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+    flex-wrap: wrap;
+  }
+  .theme-last .text {
+    width: 240px;
+  }
+  
+.icon {
+    width: 100px;
+  }
+  
+  .theme-last .icon i {
+    width: 97px;
+    height: 97px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 97px;
+    font-size: 40px;
+    transition: all linear 0.3s;
+    border: 3px solid #fafafa;
+  }
+  
+
+  .theme-last .text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #363636;
+    font-family: "Raleway", sans-serif;
+    padding-top: 16px;
+    transition: all linear 0.3s;
+  }
+  
+  .theme-last .text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #959595;
+    font-family: "Roboto", sans-serif;
+    line-height: 20px;
+    padding-top: 6px;
+  }
+  
+  .theme-last .icon:hover i {
     border-color: #e5493a;
-}
-.theme-last:hover h1  {
+    background: transparent;
+  }
+  
+  .theme-last .text:hover h3 {
     color: #e5493a;
-}
+  }
+  
 /*===============feedback part gose to here=====================*/
 .feedback-banner{
     position: relative;
+    background-image: url(../images/feedback.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 255px;
 }
+
 .feedback-overlay{
     position: absolute;
     content: '';
@@ -862,11 +904,9 @@ ul,ol {
     left: 0;
     
 }
-#img3 {
-    padding-left: 86px;
-}
-.img-iteam img {
-    padding: 0 35px;
+.img-main {
+    display: flex;
+    justify-content: space-between;
 }
 .img-iteam {
     display: flex;
@@ -876,7 +916,36 @@ ul,ol {
     margin-left: 200px;
     
 }
-
+.icon-feedback .left {
+    font-size: 20px;
+    width: 40px;
+    color: #ffffff;
+    padding: 10px 10px;
+    border-radius: 15%;
+    background-color: #dc5345;
+    position: absolute;
+    left: 26%;
+    top: 44%;
+    transition: all linear .3s;
+}
+.icon-feedback .right {
+    font-size: 20px;
+    width: 40px;
+    color: #ffffff;
+    padding: 10px 10px;
+    border-radius: 15%;
+    background-color: #dc5345;
+    position: absolute;
+    left: 80%;
+    top: 44%;
+    transition: all linear .3s;
+}
+.left:hover {
+    background-color: #363636;
+}
+.right:hover {
+    background-color: #363636;
+}
 /*===============footer part gose to here=====================*/
 #footer {
     background-color: #252525;
@@ -1217,9 +1286,7 @@ ul,ol {
 }
 /*===============Navbar part gose to here=====================*/
 
-.bg {
-    background-color: red;
-}
+
 .preloader {
     position: fixed;
     width: 100%;
